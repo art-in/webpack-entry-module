@@ -1,0 +1,1 @@
+module.exports = 'Text from sub-module2';

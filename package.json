@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "glob": "^6.0.1",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "webpack": "^1.12.9"
+  },
+  "name": "webpack-entry-module",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/artin-phares",
+  "license": "",
+  "description": "One bundle for several pages with Webpack"
+}
