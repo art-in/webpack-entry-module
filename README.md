@@ -3,7 +3,7 @@ I.e. you have two pages, both reference bundle.js, but page1 should startup with
 
 You will get into little trouble here - webpack only allow one entry point in one bundle.
 
-This repo show one possible way to workaround this issue.
+This repo shows one possible way to workaround this issue.
 
 And do like this:
 
