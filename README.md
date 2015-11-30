@@ -9,15 +9,15 @@ And do like this:
 
 ```html
 page1.html:
-<script src="bundle.js" webpack-entry-module="module-for-page1"></script>
+<script src="bundle.js" webpack-entry-module="module-for-page1.js"></script>
 
 page2.html:
-<script src="bundle.js" webpack-entry-module="module-for-page2"></script>
+<script src="bundle.js" webpack-entry-module="module-for-page2.js"></script>
 ```
 
 Main idea:  
-You set special entry point [webpack-entry-module](https://github.com/artin-phares/webpack-entry-module/blob/master/example/src/webpack-entry-module.js) when building.  
-When running, it extracts module you want to startup with from script-tag attribute, and conditionaly requires it.
+You set special [webpack-entry-module](https://github.com/artin-phares/webpack-entry-module/blob/master/example/src/webpack-entry-module.js) as entry point when building.  
+When running, it extracts name of startup module from script-tag attribute, and conditionaly requires it.
 
-But it is boring to specify all modules you want to startup with manually.  
+But it is boring to specify all possible startup modules manually.  
 That's why there is [gulp task](https://github.com/artin-phares/webpack-entry-module/blob/master/gulpfile.js) which generates [webpack-entry-module](https://github.com/artin-phares/webpack-entry-module/blob/master/example/src/webpack-entry-module.js) automatically when building.
