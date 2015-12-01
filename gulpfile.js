@@ -73,7 +73,6 @@ function getWebpackEntryModuleBootstrapCode(modules) {
 		"var scriptTag = document.querySelector('script');\n" +
 		"var entryModule = scriptTag.getAttribute('webpack-entry-module');\n" +
 		"if (!entryModule) throw Error('No entry module specified!');\n\n" +
-
 		"// We should explicitly require all modules,\n" +
 		"// so webpack can find them in text of this module and then bundle\n" +
 		"switch(entryModule) {\n" +
