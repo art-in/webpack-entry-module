@@ -52,7 +52,7 @@ function getModulePaths() {
   glob.sync(__dirname + srcPath + "/**/*.js", {
     nonull: false
   }).forEach(function (file) {
-    if (file.indexOf("webpack-entry-module.js") != -1) return;
+    if (file.indexOf("webpack-entry-module.js") !== -1) return;
     file = path.normalize(path.relative(__dirname + srcPath,file));
     file = file.replace("\\", "/");
     modules.push(file);
@@ -83,10 +83,10 @@ function getWebpackEntryModuleBootstrapCode(modules) {
 	// resolve template
 	var cases = [];
 	modules.forEach(function(module) {
-		cases.push("case '" + module + "': require('./" + module + "'); break;")
+		cases.push("case '" + module + "': require('./" + module + "'); break;");
 	});
 	
-	return template.replace("//MODULE_CASES_STUB", cases.join("\n"))
+	return template.replace("//MODULE_CASES_STUB", cases.join("\n"));
 }
 
 //endregion webpack-entry-module
