@@ -54,7 +54,7 @@ function getModulePaths() {
   }).forEach(function (file) {
     if (file.indexOf("webpack-entry-module.js") !== -1) return;
     file = path.normalize(path.relative(__dirname + srcPath,file));
-    file = file.replace("\\", "/");
+    file = file.replace(/\\/g, "/");
     modules.push(file);
   });
 
@@ -70,7 +70,7 @@ function getWebpackEntryModuleBootstrapCode(modules) {
 		"// webpack-entry-module bootstrap (autogeneraged)\n\n" +
 		"// Extract path to entry module from script-tag\n" +
 		"// TODO: check attribute in script-tag of webpack bundle only, not just first one\n" +
-		"var scriptTag = document.querySelector('script');\n" +
+		"var scriptTag = document.querySelector('script[webpack-entry-module]');\n" +
 		"var entryModule = scriptTag.getAttribute('webpack-entry-module');\n" +
 		"if (!entryModule) throw Error('No entry module specified!');\n\n" +
 		"// We should explicitly require all modules,\n" +
